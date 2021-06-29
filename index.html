@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="icon-container">
+        <img id='icon' src='https://www.weatherbit.io/static/img/icons/c02d.png'>
+      </div>
+    </div>
+    <div class="content">
+      <div class="general-information">
+        <div class="status" data-status>Enter A City</div>
+        <div class="location" data-location>To Find The Weather</div>
+      </div>
+      <div class="details-section">
+        <div class="detail">
+          <div class="title">Wind</div>
+          <div class="value" data-wind>TBD</div>
+        </div>
+        <div class="detail">
+          <div class="title">Temperature</div>
+          <div class="value" data-temperature>TBD</div>
+        </div>
+        <div class="detail">
+          <div class="title">Precipitation</div>
+          <div class="value" data-precipitation>TBD</div>
+        </div>
+      </div>
+    </div>
+    <form class="city-search-container">
+      <input type="text" class='city-search' placeholder="Enter City Name" required>
+      <button class='search'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M23.809 21.646l-6.205-6.205c1.167-1.605 1.857-3.579 1.857-5.711 0-5.365-4.365-9.73-9.731-9.73-5.365 0-9.73 4.365-9.73 9.73 0 5.366 4.365 9.73 9.73 9.73 2.034 0 3.923-.627 5.487-1.698l6.238 6.238 2.354-2.354zm-20.955-11.916c0-3.792 3.085-6.877 6.877-6.877s6.877 3.085 6.877 6.877-3.085 6.877-6.877 6.877c-3.793 0-6.877-3.085-6.877-6.877z"/></svg> 
+      </button>
+    </form>
+  </div>
+  <a href='https://www.weatherbit.io/features' class='weatherbit-logo'>Powered By Weatherbit</a>
+</body>
+</html>

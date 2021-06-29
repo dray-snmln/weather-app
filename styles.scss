@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(104, 104, 104);
+  font-family: 'Karla', consolas;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  max-width: 90%;
+  width: 800px;
+  background-color: white;
+  box-shadow: 0 5px 10px black;
+  border-radius: 5px;
+  margin: 10px;
+
+  .header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .content {
+    padding: 40px;
+    margin-top: 50px;
+  }
+
+  .icon-container {
+    position: relative;
+    top: 70px;
+    padding: 20px;
+    background-color: white;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+
+  .general-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .status {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .location {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+
+  .details-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 20px;
+
+    .title {
+      font-size: 1.5rem;
+      flex-grow: 1;
+      font-weight: bold;
+    }
+
+    .value {
+      font-size: 1.5rem;
+      margin-top: 20px;
+    }
+  }
+
+  .city-search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 50px;
+
+    .city-search {
+      font-size: 1.5rem;
+      outline: none;
+      border: 1px solid #777;
+      border-radius: 5px;
+      padding: 10px 15px;
+      width: 75%;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search {
+      margin-left: 15px;
+    }
+  }
+}
+
+.weatherbit-logo {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media all and (max-width: 600px) {
+  .details-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 0;
+  }
+
+  .weatherbit-logo {
+    position: absolute;
+    bottom: 10px;
+    left: -50%;
+  }
+}
