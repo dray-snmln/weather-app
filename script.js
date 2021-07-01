@@ -1,12 +1,11 @@
 const weatherIcon = document.querySelector('#icon')
 const searchBox = document.querySelector('.city-search')
 const searchButton = document.querySelector('.search')
-const key = '21b57f0a705c4ca9b9a8f95335aabec3'
 
 searchButton.addEventListener('click', (event) => {
   event.preventDefault();
   if (searchBox.value !== '') {
-    const url = `https://api.weatherbit.io/v2.0/current?&city=${searchBox.value}&key=${key}`
+    const url = `https://api.weatherbit.io/v2.0/current?&city=${searchBox.value}&key=21b57f0a705c4ca9b9a8f95335aabec3`
     fetch(url)
       .then(response => response.json())
       .then(data => setWeatherData(data))
@@ -20,9 +19,6 @@ const humidityElement = document.querySelector('[data-humidity]')
 const windElement = document.querySelector('[data-wind]')
 
 const setWeatherData = (data) => {
-  console.log(data.data[0])
-  console.log(data.data[0].weather.description)
-
   const weatherDesc = data.data[0].weather.description
   const weatherDescCapitalized  = weatherDesc.split(' ').map((word) => { 
         return word[0].toUpperCase() + word.substring(1); 
