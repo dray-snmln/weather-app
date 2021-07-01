@@ -6,8 +6,7 @@ const key = '21b57f0a705c4ca9b9a8f95335aabec3'
 searchButton.addEventListener('click', (event) => {
   event.preventDefault();
   if (searchBox.value !== '') {
-    const proxy = 'https://cors-anywhere.herokuapp.com/'
-    const url = `${proxy}https://api.weatherbit.io/v2.0/current?&city=${searchBox.value}&key=${key}`
+    const url = `https://api.weatherbit.io/v2.0/current?&city=${searchBox.value}&key=${key}`
     fetch(url)
       .then(response => response.json())
       .then(data => setWeatherData(data))
@@ -35,5 +34,5 @@ const setWeatherData = (data) => {
   humidityElement.textContent = `${+(data.data[0].rh).toFixed(1)}%`
   windElement.textContent = `${+(data.data[0].wind_spd * 3.6).toFixed(1)} km/h`
   weatherIcon.src = `https://www.weatherbit.io/static/img/icons/${data.data[0].weather.icon}.png`
-  document.body.style.backgroundImage = `url('https://source.unsplash.com/1600x900/?${data.data[0].city_name}')`
+  document.body.style.backgroundImage = `url('https://source.unsplash.com/random/1600x900/?${data.data[0].city_name}')`
 }
